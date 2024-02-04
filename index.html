@@ -23,7 +23,8 @@
   </header>
 
   <main class="app">
-    <h1>AutoServise&nbsp;&mdash; занимаемся ремонтов автомобилей, запишись на&nbsp;ремонт онлайн.</h1>
+    <h1 class="visually-hidden">AutoServise&nbsp;&mdash; занимаемся ремонтов автомобилей, запишись на&nbsp;ремонт
+      онлайн.</h1>
     <section class="hero">
       <div class="container">
         <h2 class="hero__title">
@@ -31,21 +32,25 @@
           <span class="hero__title-down">Ремонт</span>
         </h2>
 
-        <p class="hero__year">
-          <time datetime="2018">с&nbsp;2018 года</time>
-        </p>
-
-        <p class="hero__tagline">Быстро. Качественно. Доступно.</p>
+        <div class="hero__intro">
+          <p class="hero__year"><time datetime="2018">с&nbsp;2018 года</time></p>
+          <p class="hero__tagline">Быстро. Качественно. Доступно.</p>
+        </div>
       </div>
     </section>
 
     <section class="about">
-      <div class="container">
-        <h2 class="about__title">Почему мы</h2>
+      <div class="about__bg">
+        <div class="container about__container">
+          <h2 class="about__title">
+            <span class="about__title-text">Почему</span>
+            <span class="about__title-text about__title-text_black">мы</span>
+          </h2>
 
-        <p class="about__text">С&nbsp;момента основания нашей автомастерской мы&nbsp;уделяем особое внимание каждой
-          детали и
-          работаем с&nbsp;любыми марками автомобилей.</p>
+          <p class="about__text">С&nbsp;момента основания нашей автомастерской мы&nbsp;уделяем особое внимание каждой
+            детали и
+            работаем с&nbsp;любыми марками автомобилей.</p>
+        </div>
       </div>
     </section>
 
@@ -166,6 +171,7 @@
             </div>
 
             <div class="form__time">
+              <p>Доступное время:</p>
               <div class="radio">
                 <input type="radio" name="time" class="radio__input" id="10">
                 <label class="radio__label" for="10">10:00</label>

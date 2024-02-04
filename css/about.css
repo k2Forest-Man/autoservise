@@ -1,0 +1,71 @@
+.about {
+  padding: 92px 0;
+  background-image: linear-gradient(#222222 0%,
+      #222222 50%,
+      #F0F4F4 50%,
+      #F0F4F4 100%);
+}
+
+.about__bg {
+  display: flex;
+  position: relative;
+  min-height: 56vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('../img/redbg.svg');
+}
+
+.about__bg::before,
+.about__bg::after {
+  content: '';
+  position: absolute;
+  background: url('../img/tire.svg') center/contain no-repeat;
+  pointer-events: none;
+  height: 25vw;
+  left: 0;
+  right: 0;
+}
+
+.about__bg::before {
+  top: 0;
+  transform: translateY(-25%);
+}
+
+.about__bg::after {
+  bottom: 0;
+  transform: translateY(25%);
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.about__title {
+  padding: 14px 60px 14px 0;
+  max-width: min-content;
+  text-align: right;
+  justify-self: end;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  border-right: 2px solid #fff;
+}
+
+.about__title-text_black {
+  color: #222;
+}
+
+.about__text {
+  padding: 14px 0 14px 60px;
+  max-width: 510px;
+  justify-self: start;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: #fff;
+}
