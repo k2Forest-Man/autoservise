@@ -116,10 +116,22 @@
   width: 526px;
   height: 46px;
   background-color: #f0f4f4;
+  border: none;
+}
+
+.form__input::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #222;
 }
 
 .form__info {
-
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #222;
+  margin-bottom: 4px;
 }
 
 .form__info-data {
@@ -127,11 +139,22 @@
 }
 
 .form__btn-wrapper {
-
+  display: flex;
+  gap: 8px;
 }
 
 .form_btn {
-
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #222;
+  border-radius: 50px;
+  padding: 12px 20px;
+  background: #f0f4f4;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .form_btn-next {
