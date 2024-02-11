@@ -79,6 +79,8 @@
 
 .form__months {
   margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .form__btn-month {
@@ -89,6 +91,7 @@
 
 .form__btn-month_active {
   color: #d10014;
+  transform: scale(1.05);
 }
 
 .form__subtitle {
@@ -97,10 +100,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-}
-
-.form__btn-month {
-
 }
 
 .form__input-wrapper {
@@ -113,30 +112,29 @@
 .form__input {
   border-radius: 8px;
   padding: 12px 20px;
-  width: 526px;
-  height: 46px;
   background-color: #f0f4f4;
-  border: none;
+  border: 1px solid transparent;
+  color: inherit;
 }
 
-.form__input::placeholder {
+.form__input:hover {
+  background-color: #f0f4f4;
+}
+
+.form__input:focus-visible {
+  border-color: #D0D0D0;
+
+}
+
+/* .form__input::placeholder {
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
   color: #222;
-}
+} */
 
 .form__info {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 140%;
-  color: #222;
-  margin-bottom: 4px;
-}
-
-.form__info-data {
-  font-weight: 500;
-  font-size: 16px;
   line-height: 140%;
 }
 
@@ -146,25 +144,83 @@
 }
 
 .form_btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
   color: #222;
   border-radius: 50px;
-  padding: 12px 20px;
-  background: #f0f4f4;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  justify-content: center;
+  background-color: #f0f4f4;
 }
 
-.form_btn-next {
+.form__btn-next {
+  color: #FFF;
+  background-color: #D10014;
+}
 
+.form_btn-submit {
+  color: #FFF;
+  background-color: #D10014;
 }
 
 .form_btn:disabled {
   color: #222;
   background: #f0f4f4;
   opacity: 0.4;
+  pointer-events: none;
+}
+
+@media (max-width: 1080px) {
+  .contact {
+    padding-top: 60px;
+  }
+
+  .contact__title {
+    font-size: 60px;
+  }
+  
+  .form {
+    padding: 40px;
+  }
+
+  .form__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding: 50px 0 100px;
+  }
+
+  .contact__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 660px) {
+  .contact {
+    padding: 50px 0 80px;
+  }
+
+  .contact__title {
+    font-size: 32px;
+  }
+
+  .form {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .form__input-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+
 }
