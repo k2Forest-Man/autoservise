@@ -165,6 +165,7 @@
 .form_btn-submit {
   color: #FFF;
   background-color: #D10014;
+  display: none;
 }
 
 .form_btn:disabled {

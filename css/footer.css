@@ -44,18 +44,29 @@
   color: #D10014;
 }
 
-@media (max-width: 1080px) {
-
-}
-
-@media (max-width: 900px) {
-
-}
-
 @media (max-width: 660px) {
+  .footer {
+    padding: 24px 0 20px;
+  }
 
-}
+  .footer__container {
+    gap: 0;
+    grid-template-areas: 
+      "logo"
+      "copyright"
+      "developers";
+  }
 
-@media (max-width: 460px) {
+  .footer__logo {
+    max-width: 230px;
+    margin-bottom: 32px;
+  }
 
+  .footer__copyright {
+    margin-bottom: 16px;
+  }
+
+  .footer__developers {
+    justify-self: start;
+  }
 }
