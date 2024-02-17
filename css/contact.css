@@ -24,6 +24,11 @@
 
 .form__fieldset {
   margin-bottom: 32px;
+  display: none;
+}
+
+.form__fieldset--active {
+  display: block;
 }
 
 .form__title {
@@ -162,7 +167,7 @@
   background-color: #D10014;
 }
 
-.form_btn-submit {
+.form__btn-submit {
   color: #FFF;
   background-color: #D10014;
   display: none;
