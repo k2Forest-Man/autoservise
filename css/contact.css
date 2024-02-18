@@ -67,6 +67,7 @@
   font-size: 16px;
   line-height: 140%;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .radio__label:hover {
@@ -225,8 +226,4 @@
   .form__input-wrapper {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 460px) {
-
 }
