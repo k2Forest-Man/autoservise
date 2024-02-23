@@ -1,9 +1,13 @@
 const form = document.querySelector('.form');
-const formFieldsets = document.querySelectorAll('.form__fieldset');
 const formBtnPrev = document.querySelector('.form__btn-prev');
 const formBtnNext = document.querySelector('.form__btn-next');
 const formBtnSubmit = document.querySelector('.form__btn-submit');
 const formTime = document.querySelector('.form__time');
+const formFieldsetType = document.querySelector('.form__fieldset__type');
+const formFieldsetDate = document.querySelector('.form__fieldset--date');
+const formFieldsetClient = document.querySelector('.form__fieldset--client');
+const formFieldsets = [formFieldsetType, formFieldsetDate, formFieldsetClient];
+
 
 let currentStep = 0;
 
@@ -55,6 +59,20 @@ const handleInputForm = ({ currentTarget, target }) => {
     } else {
       formBtnNext.disabled = true;
     }
+  }
+
+  if (currentStep === 2) {
+    const inputs = formFieldsetClient.querySelectorAll('.form__input');
+    let allFilled = true; 
+
+    //перебираем все инпуты, и если хоть 1 не заполнен, то formBtnSubmit = disabled;
+    inputs.forEach(input => {
+      if (input.value.trim() === '') {
+        allFilled = false;
+      }
+    });
+
+    formBtnSubmit.disabled = !allFilled;
   }
 }
 
