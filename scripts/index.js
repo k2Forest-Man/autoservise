@@ -1,3 +1,5 @@
+import { fetchData } from "./fetchData.js";
+
 const form = document.querySelector('.form');
 const formBtnPrev = document.querySelector('.form__btn-prev');
 const formBtnNext = document.querySelector('.form__btn-next');
@@ -10,6 +12,38 @@ const formFieldsets = [formFieldsetType, formFieldsetDate, formFieldsetClient];
 
 
 let currentStep = 0;
+
+const data = await fetchData();  
+console.log('data: ', data);
+const dataToWrite = {
+  dataType: {},
+  day: '',
+  time: '',
+};
+  //Создаем функцию которая рендерит кнопки на странице
+const createRadioBtns = (wrapper, name, data) => {
+  wrapper.textContent = '';
+
+  data.forEach(item => {
+    const radioDiv = document.createElement('div');
+    radioDiv.className = 'radio';
+
+    const radioInput = document.createElement('input');
+    radioInput.className = 'radio__input';
+    radioInput.type = 'radio';
+    radioInput.name = name;
+    radioInput.id = item.value;
+    radioInput.value = item.value;
+
+    const radioLabel = document.createElement('label');
+    radioInput.className = 'radio__input';
+    radioInput.htmlFor = item.value;
+    radioInput.textContent = item.title;
+
+    radioDiv.append (radioInput, radioLabel);
+    wrapper.append (radioDiv);
+  });
+};
 
 const updateFieldsetVisibility = () => {
   for (let i = 0; i < formFieldsets.length; i++) {
@@ -76,6 +110,10 @@ const handleInputForm = ({ currentTarget, target }) => {
   }
 }
 
+const renderTypeFieldset = () => {
+  createRadioBtns
+}
+
 const init = () => {
   formBtnNext.disabled = true;
 
@@ -99,6 +137,7 @@ const init = () => {
   form.addEventListener('input', handleInputForm)
   
   updateFieldsetVisibility();
+  renderTypeFieldset();
 };
 
 init();
